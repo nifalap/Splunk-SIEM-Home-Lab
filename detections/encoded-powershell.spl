@@ -1,0 +1,9 @@
+index=windows source="WinEventLog:Microsoft-Windows-Sysmon/Operational"
+| rex field=_raw "<EventID>(?<SysmonEventID>\d+)</EventID>"
+| search SysmonEventID=1
+| rex field=_raw "<Data Name='Image'>(?<Image>[^<]*)</Data>"
+| rex field=_raw "<Data Name='CommandLine'>(?<CommandLine>[^<]*)</Data>"
+| rex field=_raw "<Data Name='ParentImage'>(?<ParentImage>[^<]*)</Data>"
+| where match(CommandLine, "(?i)-(?:enc|encodedcommand)\s+")
+| table _time host Image CommandLine ParentImage
+| sort -_time
