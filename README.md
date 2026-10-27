@@ -7,14 +7,6 @@ The setup consists of an Ubuntu VM running Splunk Enterprise and a Windows 11 VM
 
 ## Lab Environment
 
-| Component | Setup |
-| SIEM | Splunk Enterprise 10.6.0.5 |
-| Server | Ubuntu Desktop 24.04 |
-| Endpoint | Windows 11 |
-| Virtualization | VirtualBox |
-| Log Collection | Splunk Universal Forwarder, Sysmon |
-| Splunk Index | `windows` |
-
 Both VMs use NAT for internet access and a host-only network for communication with each other.
 
 Windows forwards logs to Splunk at `192.168.104.10:9997`.
