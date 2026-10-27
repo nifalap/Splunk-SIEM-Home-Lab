@@ -1,0 +1,2 @@
+index=windows source="WinEventLog:Security" EventCode=4625
+| timechart span=1h count as FailedLogins
