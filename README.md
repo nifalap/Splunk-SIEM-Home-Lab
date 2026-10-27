@@ -59,6 +59,7 @@ Created a dashboard with four panels:
 - Top 10 process creations
 - Encoded PowerShell detections
 
+![Windows Endpoint Security Monitoring Dashboard](11-soc-monitoring-dashboard.PNG)
 
 ## Issues Encountered
 
