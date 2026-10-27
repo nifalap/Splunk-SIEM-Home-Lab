@@ -74,3 +74,10 @@ Created a dashboard with four panels:
 ## Notes
 
 The detections were tested against activity generated inside the lab. They are basic examples to show proof of concept ideas, not production-ready detection rules.
+
+## Project Files
+
+- [Encoded PowerShell detection](detections/encoded-powershell.spl)
+- [Failed login monitoring](detections/failed-logins.spl)
+- [Process creation analysis](detections/top-process-creations.spl)
+- [Encoded PowerShell investigation](investigations/encoded-powershell.md)
